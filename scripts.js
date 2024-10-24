@@ -34,7 +34,10 @@ form.addEventListener("submit", (event) => {
     //perform the division calculation resulting in a whole number
     const wholeNumberResult = Math.floor(dividendNumber / dividerNumber);
     result.innerText = wholeNumberResult;
-
-    
+  //add a catch to handle errors
+  } catch (error) {
+    document.body.innerHTML = `<div class="critical error">Something critical went wrong. Please reload the page.</div>`;
+    console.error(error, error.stack);
+  }
   });
 
