@@ -30,6 +30,11 @@ form.addEventListener("submit", (event) => {
       console.error(new Error("Division by Zero error"), new Error().stack);
       return;
     }
-  }
-});
+
+    //perform the division calculation resulting in a whole number
+    const wholeNumberResult = Math.floor(dividendNumber / dividerNumber);
+    result.innerText = wholeNumberResult;
+
+    
+  });
 
